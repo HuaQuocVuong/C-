@@ -20,24 +20,24 @@ Thành phần first và second của pair có thể là các kiểu dữ liệu 
 hay cũng có thể chính là một pair khác. Ngoài ra nó còn có thể là các kiểu phức tạp hơn như string, vector<>, set, object... 
 tuy nhiên nhưng kiến thức này bạn chưa gặp nên tạm thời bỏ qua.
 
+vi du 1: khai bao pair
+
 #include <iostream>
 #include <utility>
-
 using namespace std;
-
 int main() {
+
 	int x, y;
 	cout << "Nhap so nguyen x, y: ";
-	cin >> x >> y;
-	cout << "Nhap ky tu z: ";
-	
+ 	cin >> x >> y;	//1 2
+
 	double z, t;
 	cout << "Nhap so thap phan z, t: ";
-	cin >> z >> t;
+	cin >> z >> t;	//1.5 2.5
 
 	char m, n;
 	cout << "Nhap ky tu m, n: ";
-	cin >> m >> n;
+	cin >> m >> n;	//A B
 
 
 	pair <int, int> a = make_pair(x, y);
@@ -49,3 +49,6 @@ int main() {
 	pair <char, char> c(m, n);
 	cout << c.first << " " << c.second << endl;
 }
+
+
+
