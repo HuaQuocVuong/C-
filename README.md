@@ -58,6 +58,7 @@ int main() {
 using namespace std;
 
 int main() {
+
 	int x, y, z;
 	cout << "Nhap so nguyen x, y, z: ";
 	cin >> x >> y >> z;
