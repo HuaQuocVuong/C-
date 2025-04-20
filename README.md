@@ -50,5 +50,55 @@ int main() {
 	cout << c.first << " " << c.second << endl;
 }
 
+//Vi du 2: pair long nhau
+
+#include <iostream>
+#include <utility>
+
+using namespace std;
+
+int main() {
+	int x, y, z;
+	cout << "Nhap so nguyen x, y, z: ";
+	cin >> x >> y >> z;
+
+	//pair < kieu_du_lieu_1, pair < kieu_du_lieu_2 , kieu_du_lieu_3> > ten_ham = make_pair(x, (make_pair (y, z)));
+	pair <int, pair<double, char>> a = make_pair(x, (make_pair(y, z)));
+
+	//pair <[first]_, pai<[second.first], [second.seccond]>>
+	cout << a.first << endl;	//first: Phan tu thu nhat cua pair
+	cout << a.second.first << " " << a.second.second << endl;	//second.first: phan tu thu 2 //scond.second: phan tu thu 3
+
+	int x1, x2, x3, x4;
+	cout << "Nhap so nguyen x1, x2, x3, x4: ";
+	cin >> x1 >> x2 >> x3;
+
+	//pair<pair<kieu_du_lieu_1, kieu_du_lieu_2>, pair<kieu_du_lieu_3, kieu_du_lieu_4>> ten_ham = { {x1, x2}, {x3,x4} };
+	pair<pair<int, int>, pair<int, int>> b = { {x1, x2}, {x3, x4} };
+
+
+	//pair < pair<[first.first], [first.second]>, pair<[second.first], [second. second]> >
+	cout << b.first.first << " " << b.first.second << endl; 
+	cout << b.second.first << " " << b.second.second << endl;
+}
+
+ 	 a
+        /  \
+   first   second
+   (int)   (pair)
+           /    \
+       first   second
+      (double) (chart)
+
+             b
+           /   \
+      first    second
+     (pair)     (pair)
+     /   \       /   \
+(int)   (int)  (int)  (int)
+
+
+
+
 
 
