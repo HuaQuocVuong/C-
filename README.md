@@ -172,6 +172,47 @@ int main() {
 
 
 
+//vi du 3: swap 2 pair voi nhau bang ham swap
+---------------------------------------------------------------
+.....
+pair<data_type_1, data_type_2> variable_1 = {value_1, value_2};
+pair<data_type_3, data_type_4> variable_2 = {value_3, value_4};
+
+variable_1.swap(variable_2);
+
+cout << variable_1.value_1 << " " << variable_1.value_2 << endl;	
+// value_1 -> value 3; value_2 -> value_4
+
+cout << variable_2.value_3 << " " << variable_2.va;ue_4 << endl;	
+// value_2 -> value_1; value_4 -> value_2
+---------------------------------------------------------------
+#include <iostream>
+#include <utility>
+
+using namespace std;
+
+int main() {
+	int x1, x2;
+	cout << "Nhap so nguyen x1, x2: ";
+	cin >> x1 >> x2;	//x1 = 1 //x2 = 2
+	int x3, x4;
+	cout << "Nhap so nguyen x3, x4: ";
+	cin >> x3 >> x4;	//x1 = 3 //x3 = 4
+
+	pair<int, int> p1 = { x1, x2 };
+	pair<int, int> p2 = { x3, x4 };
+
+	cout << "before \n";
+	cout << "p1(before) = {" << p1.first << "," << p2.second << "}" << endl;	//p1.first = 1, p1.second = 2
+	cout << "p2(before) = {" << p2.first << "," << p2.second << "}" << endl;	//p2.first = 3, p2.second = 4
+
+	p1.swap(p2);	//Gan p1 cho p2 (Hoan doi gia tri)
+	cout << "swap after \n";	
+	cout << "p1(after) = " << p1.first << "," << p1.second << "}" << endl;	//3 4
+	cout << "p2(after) = " << p2.first << "," << p2.second << "}" << endl;	//1 2
+
+	return 0;
+}
 
 
 
