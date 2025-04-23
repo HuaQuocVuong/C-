@@ -101,6 +101,15 @@ int main() {
 
 //Vi du 1: toan gan se gan gtri cuaa first va second cua 2 pair cho nhau
 //string - chuoi ky tu
+
+----------------------------------------------------------------------------
+pair<data_type_1, data_type_2> result = (value_1, value_2);
+cout << result.first << "  " << result.second << endl;
+
+//first = value_1
+//second = value_2
+----------------------------------------------------------------------------
+
 #include <iostream>
 #include <utility>
 using namespace std;
@@ -131,6 +140,14 @@ int main() {
 
 //vi du 2: so sanh 2 pair 
 //so sanh 2 gia tri first sau do so sanh second
+
+---------------------------------------------------------------
+pair<data_type_1, data_type_2> compare = {value_1, value_2};
+cout << boolalpha << (value_1 ... value_2) << endl;
+
+//true -> true
+//false -> false
+---------------------------------------------------------------
 
 #include <iostream>
 #include <utility>
