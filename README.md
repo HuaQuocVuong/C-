@@ -99,6 +99,61 @@ int main() {
 (int)   (int)  (int)  (int)
 
 
+//Vi du 1: toan gan se gan gtri cuaa first va second cua 2 pair cho nhau
+//string - chuoi ky tu
+#include <iostream>
+#include <utility>
+using namespace std;
+
+int main() {
+
+	string x1;
+	cout << "Nhap ky tu x1: ";
+	cin >> x1; //ABCD
+ 
+	int x2;
+	cout << "Nhap so nguyen x2: ";
+	cin >> x2;	//1234
+
+	pair<string, int> p1 = make_pair(x1, x2);	//x1 = first //x2 = second	
+	pair<string, int> p2 = p1;	
+	//Gan p2 = P1  
+	cout << p1.first << " " << p1.second << endl;
+	cout << p2.first << " " << p2.second << endl;
+
+	cout << p1.first << " " << p2.second << endl;	
+	cout << p2.first << " " << p2.second << endl;
+	
+	//Mac dinh first = ABCD// second = 1234
+	return 0;
+}
+
+
+//vi du 2: so sanh 2 pair 
+//so sanh 2 gia tri first sau do so sanh second
+
+#include <iostream>
+#include <utility>
+using namespace std;
+
+int main() {
+
+	int x1, x2;
+	cout << "Nhap so nguyen x1: ";
+	cin >> x1;	//1
+	cout << "Nhap so nguyen x2: ";
+	cin >> x2;	//2
+
+	//compare : so sanh
+	pair<int, int> compare = { x1, x2 };
+
+	cout << boolalpha << (x1 == x2) << endl;	// ==	(false)
+	cout << boolalpha << (x1 != x2) << endl;	// !=	(true)	
+	cout << boolalpha << (x1 > x2) << endl;		// >	(false)
+	cout << boolalpha << (x1 < x2) << endl;		// <	(true)
+}
+
+
 
 
 
