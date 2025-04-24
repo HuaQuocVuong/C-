@@ -214,5 +214,67 @@ int main() {
 	return 0;
 }
 
+1. Toán tử gán
+- Toán tử gán dấu ( = ) được sử dụng trong các bài khi ta muốn gán giá trị cho biến
+- Syntax (Cú pháp): x = y
+- Meaning (Ý nghĩa): assingn x value to y value.
+
+---------------------------------------------------------------
+int x = value_x
+
+int y = x;	//y = value_x
+cout << "Value y = " << y <<  endl; //y = value x
+---------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x;
+	cout << "Enter x value: ";
+	cin >> x;
+
+	//x value assigning to y value
+	int y = x;
+	cout << "x value = " << x << " before assigning to y value, y value = " << y << endl;
+
+	return 0;
+}
+
+2. Toán tử toán học
+   a. + (addition)
+   b. - (subtraction)
+   c. * (multiplication)
+   d. / (division)
+   e. % (modulus operator)
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+	int length, width;
+	cout << "Enter length: ";
+	cin >> length;
+	cout << "Enter width: ";
+	cin >> width;
+
+	//perimeter of rectangle equal two multiply by (length plus width)
+	int perimeter_of_rectangle = 2*(length + width);
+	cout << "Perimeter of rectangle equal: " << perimeter_of_rectangle << endl;
+
+	int acreage_of_rectangle = length * width;
+	cout << "acreage of rectangle equal " << acreage_of_rectangle << endl;
 
 
+	int dai, rong;
+	cout << "Nhap chieu dai, rong: ";
+	cin >> dai >> rong;
+	int chuvi = 2 * (dai + rong);
+	int dientich = dai * rong;
+	cout << "Chu vi hinh chu nhat la: " << chuvi << endl;
+	cout << "Dien tich hinh chu nhat la: " << dientich << endl;
+	return 0;
+
+}
