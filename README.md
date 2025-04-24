@@ -278,3 +278,36 @@ int main() {
 	return 0;
 
 }
+
+//Ví dụ 2: tính bán kính và in kết quả số thập phân
+---------------------------------------------------------------
+...
+#include <iomanip>
+...
+cout << fixed << setprecision(yy) << ...  << endl;	/output xx.yy
+---------------------------------------------------------------
+//Circle
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+
+	double R;
+	cout << "Enter R = ";
+	cin >> R;	//R = 10
+ 
+	//C = 2*Pi*R
+	double C = 2 * 3.1415 * R;
+	//S = Pi*R*R
+	double S = 3.1415 * R * R;
+
+	cout << "C = " << fixed << setprecision(4) << C << endl;	//62.8300
+	cout << "S = " << fixed << setprecision(4) << S << endl;	//314.1500
+
+	return 0;
+}
+
+
+
