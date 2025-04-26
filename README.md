@@ -319,17 +319,52 @@ using namespace std;
 int main() {
 
 	int x1, x2;
-	double y1, y2;
+	int y1, y2;
 	cout << "Enter x1, x2: ";
 	cin >> x1 >> x2;	//4 2
 	cout << "Enter y1, y2: ";
 	cin >> y1 >> y2;	//1	2
 
 	int division_1 = x1 / x2;	//4 / 2 = 2
-	double division_2 = y1 / y2;	//1 / 2 = 0.50
+	double division_2 = double(y1) / y2;	//1 / 2 = 0.50
 
 	cout << "x1 / x2 = " << division_1 << endl;		//2
 	cout << fixed << setprecision(2) << "y1 / y2 = " << division_2 << endl;		//0.50
+
+	return 0;
+
+}
+
+Ví dụ 4: Phép chia muốn lấy phần thập phân có 2 cách xử lý
+1. Ép kiểu số chia hoặc bị chia sang số thực.
+2. Nhân só bị chia với 0.1, ngầm biến số bị chia thành số thực.
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+	//Cach 1: ep kieu sang so thuc
+	int x1, x2;
+	cout << "Enter x1, x2: ";
+	cin >> x1 >> x2;	//1 2
+	
+	float division_1 = (float)x1 / x2; // 1 / 2 = 0
+	cout << fixed << setprecision(2) << "x1 / x2 = " << division_1 << endl;	//0.50
+	
+
+	//Cach 2: Nhan so bi chia voi 1.0
+
+	int x3, x4;
+	cout << "Enter x3, x4: ";
+	cin >> x3 >> x4;	//1 2
+
+	float division_2 = 1.0 * x3 / x4;	//1.0 * 1 / 2	= 0
+	cout << fixed << setprecision(2) << "x3 / x4 = " << division_2 << endl;		//0.50
+
+
 
 	return 0;
 
