@@ -310,4 +310,29 @@ int main() {
 }
 
 
+//Vi du: phep chia nguyen
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+
+	int x1, x2;
+	double y1, y2;
+	cout << "Enter x1, x2: ";
+	cin >> x1 >> x2;	//4 2
+	cout << "Enter y1, y2: ";
+	cin >> y1 >> y2;	//1	2
+
+	int division_1 = x1 / x2;	//4 / 2 = 2
+	double division_2 = y1 / y2;	//1 / 2 = 0.50
+
+	cout << "x1 / x2 = " << division_1 << endl;		//2
+	cout << fixed << setprecision(2) << "y1 / y2 = " << division_2 << endl;		//0.50
+
+	return 0;
+
+}
+
 
