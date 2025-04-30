@@ -442,4 +442,37 @@ _Toan tu so sanh_
 ==	|	a == b
 -------------------------------------------------
 
+#include <iostream>
+#include <iomanip>
+
+int main() {
+	int x, y;
+	std::cout << "Enter a, b: ";
+	std::cin >> x >> y;	// x = 1; y =2
+----------------------------------------------------------------------
+//cout << boolalpha << ( <Value_1> <Comparison> <value_2> ) << endl;
+----------------------------------------------------------------------
+	//no namespace
+
+	std::cout << std::boolalpha << (x < y) << std::endl;	//True
+	std::cout << std::boolalpha << (x <= y) << std::endl;	//True
+
+	std::cout << std::boolalpha << (x > y) << std::endl;	//False
+	std::cout << std::boolalpha << (x >= y) << std::endl;	//False
+
+	std::cout << std::boolalpha << (x != y) << std::endl;	//True
+	std::cout << std::boolalpha << (x == y) << std::endl;	//false
+}
+
+-------------------------------------------------------
+_Toan tu logic_	
+(a = 1; b = 2)
+-------------------------------------------------------
+&&	|	(a < b && a = a )	|	True
+
+||	|	(a > b || a = a )	|	True
+
+!	|	!(a == a)		| 	False
+-------------------------------------------------------
+
 
