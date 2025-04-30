@@ -9,10 +9,13 @@ Nhìn chung pair giúp lưu trữ dữ liệu theo cặp và có những đặc 
 
 //Cách 1: first seconds là mặc định.
 pair <first_data_type, second_data_type> pair_name;
+
 //Cách 2 : Giá trị của first là value1, second là value2
 pair <first_data_type, second_data_type> pair_name = make_pair(value1, value2)
+
 //Cách 3 : Giá trị của first là value1, second là value2
 pair <first_data_type, second_data_type> pair_name(value1, value2)
+
 //Cách 4 : Giá trị của first là value1, second là value2
 pair <first_data_type, second_data_type> pair_name = {value1, value2}
 
