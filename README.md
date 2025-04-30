@@ -7,6 +7,7 @@ Nhìn chung pair giúp lưu trữ dữ liệu theo cặp và có những đặc 
 •	Bạn có thể so sánh, gán, copy pair như kiểu dữ liệu bạn thường gặp
 •	Để truy cập vào phần tử thứ nhất và thứ 2 trong pair ta sử dụng toán tử dấu chấm.
 
+----------------------------------------------------------------------------
 //Cách 1: first seconds là mặc định.
 pair <first_data_type, second_data_type> pair_name;
 
@@ -18,6 +19,7 @@ pair <first_data_type, second_data_type> pair_name(value1, value2)
 
 //Cách 4 : Giá trị của first là value1, second là value2
 pair <first_data_type, second_data_type> pair_name = {value1, value2}
+----------------------------------------------------------------------------
 
 Thành phần first và second của pair có thể là các kiểu dữ liệu thường gặp như int, float, double, long long,char... 
 hay cũng có thể chính là một pair khác. Ngoài ra nó còn có thể là các kiểu phức tạp hơn như string, vector<>, set, object... 
@@ -372,5 +374,72 @@ int main() {
 	return 0;
 
 }
+
+_Nhan hai so bi tran du lieu_
+
+//Kieu [int]
+//Giá trị nhỏ nhất : -2, 147, 483, 648 (−2^31)
+//Giá trị lớn nhất : 2, 147, 483, 647 (2^31 − 1)
+
+//Kieu [long long]
+//Giá trị nhỏ nhất : -9, 223, 372, 036, 854, 775, 808 (− 2^63)
+//Giá trị lớn nhất : 9, 223, 372, 036, 854, 775, 807 (2^63 − 1)
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	int x, y;	//data_type_int
+	cout << "Enter x, y: ";
+	cin >> x >> y;	//x = 10^6 = //y = 10^6
+
+	long long tich_1 = x * y;
+	cout << "(1) x * y = " << tich_1 << endl;	// FALSE: tich_1 = -727379968
+-----------------------------------------------------------------------------------------------------
+//ep kieu: <higher_data_type> <variable_name> = (hyger_data_type) <vale_1> * <value_2>;
+-----------------------------------------------------------------------------------------------------
+	long long tich_2 = (long long)x * y;
+	cout << "(2) x * y = " << tich_2 << endl;	//TRUE tich_2 = 1000000000000
+ 
+-----------------------------------------------------------------------------------------------------
+//Nhan voi 1ll: <higher_data_type> <variable_name> = 1ll * <vale_1> * <value_2>;
+ -----------------------------------------------------------------------------------------------------
+	long long tich_3 = 1ll * x * y;
+	cout << "(3) x * y = " << tich_3 << endl;	//TRUE tich_3 = 1000000000000
+
+	return 0;
+}
+
+-------------------------------------------------
+_Toan tu gan_
+-------------------------------------------------
++=	|	 x = x + y	|	x += y
+
+-=	|	 x = x - y	|	x -= y
+	
+*=	|	 x = x * y	|	x *= y
+
+/=	|	 x = x / y	|	x /= y
+
+%=	|	 x = x % y	|	x %= y
+--------------------------------------------------
+
+
+-------------------------------------------------
+_Toan tu so sanh_
+-------------------------------------------------
+>	|	a > b
+
+>=	|	a >= b
+
+<	|	a < b
+
+<=	| 	a <= b
+
+!=	| 	a != b
+
+==	|	a == b
+-------------------------------------------------
 
 
